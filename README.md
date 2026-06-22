@@ -2,7 +2,7 @@
 
 A free, open-source practice quiz for the **New York State driver's permit (written knowledge) test**. It runs entirely in your browser — no install, no account, no internet required after loading. Your progress is saved locally.
 
-👉 **[Try it live](#https://nancylanxik.github.io/ny-permit-practice/) 
+👉 **[Try it live](https://nancylanxik.github.io/ny-permit-practice/) 
 
 ![one-page cheat sheet](cheatsheet.pdf)
 
