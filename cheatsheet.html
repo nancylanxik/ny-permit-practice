@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NY Permit Test — One-Page Cheat Sheet</title>
+<style>
+  :root{--navy:#1F3864;--blue:#2E75B6;--green:#1F7A1F;--red:#c8102e;--amber:#b5651d;--ink:#1a1d23;--soft:#555;--line:#dfe3ea;}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#eef1f6;margin:0;padding:24px 16px;line-height:1.32}
+  .sheet{max-width:1040px;margin:0 auto;background:#fff;padding:20px 22px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--navy);padding-bottom:8px;margin-bottom:12px}
+  h1{color:var(--navy);margin:0;font-size:22px;letter-spacing:-.02em}
+  .tag{color:var(--soft);font-size:11px}
+  .toolbar{margin-bottom:12px}
+  .btn{display:inline-block;font-size:12px;font-weight:700;border-radius:7px;padding:7px 14px;text-decoration:none;cursor:pointer;border:none;margin-right:8px}
+  .btn.print{background:var(--navy);color:#fff}
+  .btn.back{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
+
+  .cols{column-count:2;column-gap:18px}
+  .block{break-inside:avoid;page-break-inside:avoid;margin-bottom:11px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:#fff}
+  .block h2{font-size:11.5px;color:#fff;background:var(--blue);margin:-8px -10px 7px;padding:4px 10px;border-radius:8px 8px 0 0;letter-spacing:.02em;text-transform:uppercase}
+  .block.park h2{background:var(--amber)} .block.warn h2{background:var(--red)}
+  .block.sign h2{background:var(--green)} .block.key h2{background:var(--navy)}
+  ul{margin:0;padding:0;list-style:none}
+  li{font-size:11px;padding:1.5px 0;display:flex;gap:5px}
+  li::before{content:"▪";color:var(--blue);flex:0 0 auto}
+  b{font-weight:700}
+  .num{font-weight:800;color:var(--navy)}
+  table{width:100%;border-collapse:collapse;font-size:10.5px}
+  td{padding:1.5px 3px;border-bottom:1px solid #eef0f4}
+  td.k{font-weight:700;white-space:nowrap}
+  .sw{display:inline-block;width:11px;height:11px;border-radius:2px;border:1px solid #aaa;vertical-align:middle;margin-right:4px}
+  .hook{font-size:10px;color:var(--green);font-weight:700;margin-top:4px;border-top:1px dashed #cfe0c8;padding-top:3px}
+  .never{font-size:10.5px;color:#7a0a1c}
+  .shaperow{display:flex;align-items:center;gap:7px;font-size:11px;padding:2px 0}
+  .shaperow svg{flex:0 0 auto;width:22px;height:22px}
+  .priority{border:2.5px solid var(--red);border-radius:9px;padding:11px 13px;margin-bottom:15px;background:#fff7f6}
+  .priority h2{font-size:13px;color:#fff;background:var(--red);margin:-11px -13px 9px;padding:5px 13px;border-radius:7px 7px 0 0;text-transform:uppercase;letter-spacing:.03em}
+  .priority .pgrid{column-count:2;column-gap:20px}
+  .priority li{font-size:11.5px;padding:2.5px 0;break-inside:avoid}
+  .priority li::before{content:"✔";color:var(--red);font-weight:800}
+  .priority .num{color:var(--red)}
+
+  @media print{
+    @page{size:letter portrait;margin:.28in}
+    body{background:#fff;padding:0;font-size:6.6pt;line-height:1.12}
+    .sheet{box-shadow:none;padding:0;max-width:none;border-radius:0}
+    .toolbar{display:none}
+    .head{margin-bottom:5px;padding-bottom:3px;border-width:1.5px}
+    h1{font-size:12pt}
+    .tag{font-size:6pt}
+    .cols{column-count:3;column-gap:9px}
+    .block{margin-bottom:4px;padding:3px 6px;border-radius:5px}
+    .block h2{font-size:6.6pt;margin:-3px -6px 3px;padding:2px 6px;border-radius:5px 5px 0 0}
+    li{font-size:6.4pt;padding:0}
+    table{font-size:6.2pt} td{padding:.5px 2px}
+    .hook{font-size:6.2pt;margin-top:2px;padding-top:2px}
+    .never{font-size:6.4pt}
+    .sw{width:9px;height:9px}
+    .shaperow{font-size:6.4pt;padding:0;gap:4px}
+    .shaperow svg{width:13px;height:13px}
+    .priority{margin-bottom:6px;padding:4px 7px}
+    .priority h2{font-size:7.5pt;margin:-4px -7px 4px;padding:2px 7px}
+    .priority .pgrid{column-gap:12px}
+    .priority li{font-size:6.6pt;padding:0}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="toolbar">
+    <button class="btn print" onclick="window.print()">🖨️ Print this page</button>
+    <a class="btn back" href="index.html">← Back to quiz</a>
+  </div>
+
+  <div class="head">
+    <h1>NY Permit Test — Cheat Sheet</h1>
+    <span class="tag">One page · verified vs. official manual</span>
+  </div>
+
+  <div class="priority">
+    <h2>⚠️ Drill these first — your common misses</h2>
+    <div class="pgrid">
+      <ul>
+        <li>Fire hydrant = <span class="num">15 ft</span> (never 5/6/8)</li>
+        <li>Dim high beams = <span class="num">500 ft</span> oncoming · <span class="num">200 ft</span> following</li>
+        <li>School zone = <span class="num">15–20 mph</span> (NOT 25 — that's a city street)</li>
+        <li>ORANGE sign = <b>construction / work zone</b> (yellow = hazard)</li>
+        <li>School bus, red lights = stop <span class="num">20 ft</span> back, <b>both directions</b></li>
+      </ul>
+      <ul>
+        <li>NYC default speed = <span class="num">25</span> mph (rest of NY = 55)</li>
+        <li>Pass on the <b>right</b> ONLY when car ahead turns <b>left</b></li>
+        <li>Double solid yellow = no pass (may cross to turn into a <b>driveway</b>)</li>
+        <li>Junior license 9pm–5am: <b>NYC = no driving</b>; LI/upstate = home↔work/school</li>
+        <li>Refuse chemical test = <span class="num">1-yr</span> revoke</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols">
+
+    <div class="block key">
+      <h2>★ Numbers</h2>
+      <ul>
+        <li><span class="num">25</span>&nbsp;mph — NYC default speed</li>
+        <li><span class="num">55</span>&nbsp;mph — rest-of-NY default</li>
+        <li><span class="num">15–20</span>&nbsp;mph — school zones</li>
+        <li><span class="num">2</span>&nbsp;sec — following distance (3–4 behind big trucks)</li>
+        <li><span class="num">100</span>&nbsp;ft — signal before turn</li>
+        <li><span class="num">500</span>&nbsp;ft — dim high beams (oncoming)</li>
+        <li><span class="num">200</span>&nbsp;ft — dim (following) / don't tailgate emergency veh.</li>
+        <li><span class="num">.08</span>&nbsp;DWI · <span class="num">.18</span>&nbsp;agg · <span class="num">.02</span>&nbsp;under-21</li>
+        <li><span class="num">20/14</span> — questions / to pass</li>
+        <li><span class="num">11</span>&nbsp;pts in 18 mo → suspension</li>
+        <li><span class="num">$1,000</span> damage → report crash to DMV</li>
+      </ul>
+    </div>
+
+    <div class="block park">
+      <h2>🅿️ Parking — keep clear by</h2>
+      <ul>
+        <li><span class="num">15 ft</span> — fire hydrant</li>
+        <li><span class="num">20 ft</span> — crosswalk at intersection</li>
+        <li><span class="num">20 ft</span> — fire-station driveway (75 ft opposite)</li>
+        <li><span class="num">30 ft</span> — traffic light, STOP/YIELD, safety zone</li>
+        <li><span class="num">50 ft</span> — railroad crossing</li>
+      </ul>
+      <div class="hook">Ladder 15→20→30→50 · meters 5→6→10→15</div>
+    </div>
+
+    <div class="block park">
+      <h2>Park on a hill</h2>
+      <ul>
+        <li><b>Uphill + curb</b> → wheels <b>away</b> from curb</li>
+        <li><b>Downhill</b> → wheels <b>toward</b> curb</li>
+        <li><b>No curb</b> → wheels toward road edge</li>
+        <li>Always set parking brake + park/1st gear</li>
+      </ul>
+    </div>
+
+    <div class="block warn">
+      <h2>🚫 Never park / no-park signs</h2>
+      <p class="never">Sidewalk · crosswalk · intersection · driveway · double-parked · railroad tracks · bridge/tunnel · lowered curb.</p>
+      <table>
+        <tr><td class="k">No Parking</td><td>stop OK — people + goods</td></tr>
+        <tr><td class="k">No Standing</td><td>people only</td></tr>
+        <tr><td class="k">No Stopping</td><td>don't stop at all</td></tr>
+      </table>
+    </div>
+
+    <div class="block sign">
+      <h2>🎨 Sign colors</h2>
+      <table>
+        <tr><td class="k"><span class="sw" style="background:#c8102e"></span>Red</td><td>Stop / prohibited</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#f2c200"></span>Yellow</td><td>Warning</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#ff7a00"></span>Orange</td><td>Construction</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#0050a0"></span>Blue</td><td>Services</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#5a3a1a"></span>Brown</td><td>Parks / historic</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#1f7a1f"></span>Green</td><td>Directions</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#fff"></span>White</td><td>Regulatory (speed)</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#c6e600"></span>Lt-grn</td><td>Ped/school crossing</td></tr>
+        <tr><td class="k"><span class="sw" style="background:#ff3b8d"></span>Pink</td><td>Incident mgmt</td></tr>
+      </table>
+    </div>
+
+    <div class="block sign">
+      <h2>🔶 Sign shapes</h2>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><polygon points="8,1.5 16,1.5 22.5,8 22.5,16 16,22.5 8,22.5 1.5,16 1.5,8" fill="#c8102e" stroke="#fff" stroke-width="1"/><text x="12" y="14.5" text-anchor="middle" font-size="5.5" font-weight="800" fill="#fff" font-family="Arial">STOP</text></svg><span><b>Octagon</b> — STOP (only one)</span></div>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><polygon points="2,4 22,4 12,22" fill="#fff" stroke="#c8102e" stroke-width="2.5"/></svg><span><b>Triangle down</b> — YIELD</span></div>
+      <div class="shaperow"><svg viewBox="0 0 30 22"><polygon points="1,3 29,11 1,19" fill="#f2c200" stroke="#1a1a1a" stroke-width="1"/></svg><span><b>Pennant</b> — no-passing zone</span></div>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><polygon points="12,1.5 22.5,9.5 18.5,22.5 5.5,22.5 1.5,9.5" fill="#c6e600" stroke="#1a1a1a" stroke-width="1"/></svg><span><b>Pentagon</b> — school zone</span></div>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#f2c200" stroke="#1a1a1a" stroke-width="1"/><text x="12" y="14.5" text-anchor="middle" font-size="9" font-weight="800" font-family="Arial">X</text></svg><span><b>Round</b> — railroad ahead</span></div>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><polygon points="12,1.5 22.5,12 12,22.5 1.5,12" fill="#f2c200" stroke="#1a1a1a" stroke-width="1"/></svg><span><b>Diamond</b> — warning</span></div>
+      <div class="shaperow"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1.5" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/></svg><span><b>Rectangle</b> — regulatory / guide</span></div>
+    </div>
+
+    <div class="block">
+      <h2>🚦 Traffic lights</h2>
+      <ul>
+        <li><b>Flashing red</b> = STOP sign</li>
+        <li><b>Flashing yellow</b> = slow, caution</li>
+        <li><b>Steady yellow</b> = stop if safe</li>
+        <li><b>Green arrow</b> = protected turn</li>
+        <li><b>Dark signal</b> = 4-way stop</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>↔️ Right-of-way</h2>
+      <ul>
+        <li>4-way tie → car on the <b>right</b></li>
+        <li>Turning left → yield oncoming + peds</li>
+        <li>In roundabout/circle → you have it</li>
+        <li>From driveway → yield to all</li>
+        <li>Blind pedestrian → always yield</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>🌙 Night &amp; weather</h2>
+      <ul>
+        <li>Headlights: ½hr after sunset–½hr before sunrise, &amp; with wipers</li>
+        <li>Dim high beams <b>500 ft</b> oncoming, <b>200 ft</b> following</li>
+        <li>Fog/rain/snow → <b>low beams</b></li>
+      </ul>
+      <div class="hook">Bad weather = LOW beams</div>
+    </div>
+
+    <div class="block">
+      <h2>↗️ Passing &amp; lines</h2>
+      <ul>
+        <li>Normally pass on the <b>left</b></li>
+        <li>Right only when car ahead turns <b>left</b></li>
+        <li>Return when you see it in your mirror</li>
+        <li>Broken line = pass OK · double solid yellow = no pass (cross only to turn into driveway)</li>
+        <li>School bus red lights → stop <b>20 ft back, both ways</b></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>🖐️ Hand signals (left arm)</h2>
+      <ul>
+        <li>Straight <b>out</b> = left turn</li>
+        <li>Bent <b>up</b> = right turn</li>
+        <li>Bent <b>down</b> = stop / slow</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>🍺 Alcohol &amp; drugs</h2>
+      <ul>
+        <li>DWI (21+): <b>.08</b>+ · 6-mo revoke</li>
+        <li>DWAI: <b>.05–.07</b> · 90-day susp.</li>
+        <li>Aggravated DWI: <b>.18</b>+ · 1-yr</li>
+        <li>Under 21 (Zero Tol.): <b>.02</b>+</li>
+        <li>Refuse test → 1-yr revoke</li>
+        <li>Only <b>time</b> lowers BAC</li>
+      </ul>
+    </div>
+
+    <div class="block key">
+      <h2>🗽 NYC-specific</h2>
+      <ul>
+        <li><b>No right on red</b> unless posted</li>
+        <li>Default speed <b>25 mph</b></li>
+        <li>Phone/text: up to <b>$200 + 5 pts</b></li>
+        <li>Move Over Law: room for stopped emergency vehicles</li>
+      </ul>
+    </div>
+
+    <div class="block key">
+      <h2>🚸 Junior license (under 18)</h2>
+      <ul>
+        <li>9 PM–5 AM curfew by region:</li>
+        <li><b>NYC</b> → no driving</li>
+        <li><b>LI / Upstate</b> → solo, home↔work/school</li>
+        <li>1 passenger under 21 (unless family)</li>
+        <li>Permit = always supervised (21+)</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>⚠️ Emergencies</h2>
+      <ul>
+        <li>Skid → off gas, <b>steer where you want to go</b></li>
+        <li>Brakes fail → <b>pump</b> first</li>
+        <li>Blowout → grip wheel, off gas, slow</li>
+        <li>Miss exit → next exit (never back up)</li>
+        <li>Stuck in crosswalk → wait, don't reverse</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>🚴 Sharing the road</h2>
+      <ul>
+        <li>No sidewalk → walk <b>facing</b> traffic</li>
+        <li>Bikes ride <b>with</b> traffic; need front white + red rear light at night; give <b>3 ft</b></li>
+        <li>Slow-moving emblem = <b>orange triangle</b></li>
+        <li>Trucks: stay where you see their mirrors</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>🅿️ Seat belts &amp; kids</h2>
+      <ul>
+        <li>Under 4 → child safety seat</li>
+        <li>4–7 → booster + lap/shoulder belt</li>
+        <li>Driver responsible for under-16; 16+ responsible for self</li>
+        <li>NY = primary enforcement</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
